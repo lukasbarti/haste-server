@@ -1,4 +1,4 @@
-FROM node:14.8.0-stretch
+FROM node:16-stretch
 
 RUN mkdir -p /usr/src/app && \
     chown node:node /usr/src/app
@@ -9,9 +9,9 @@ WORKDIR /usr/src/app
 
 RUN npm install && \
     npm install redis@0.8.1 && \
-    npm install pg@4.1.1 && \
+    npm install pg@4.5.7 && \
     npm install memcached@2.2.2 && \
-    npm install aws-sdk@2.738.0 && \
+    npm install aws-sdk@2.814.0 && \
     npm install rethinkdbdash@2.3.31
 
 COPY --chown=node:node . .
